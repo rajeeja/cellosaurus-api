@@ -43,7 +43,7 @@ ln -s /your/solr8.11.1-or-later/home/directory/ solr
 * Link cellosaurus-api solr config to 'pamcore1' collection
 
 ```shell
-cd solr/server/solr/poumcore1/conf
+cd solr/server/solr/pamcore1/conf
 mv managed-schema managed-schema.ori 
 mv solrconfig.xml solrconfig.xml.ori
 ln -s ../../../../../solr_config/schema.xml
@@ -63,9 +63,9 @@ cd ../../../../../
 data_source="https://ftp.expasy.org/databases/cellosaurus"
 mkdir -p data_in
 cd data_in
-curl "$code_source/cellosaurus.txt" > cellosaurus.txt
-curl "$code_source/cellosaurus_refs.txt" > cellosaurus_refs.txt
-curl "$code_source/cellosaurus.xml" > cellosaurus.xml
+curl "$data_source/cellosaurus.txt" > cellosaurus.txt
+curl "$data_source/cellosaurus_refs.txt" > cellosaurus_refs.txt
+curl "$data_source/cellosaurus.xml" > cellosaurus.xml
 ```
 
 ## Build api indexes and solr data
